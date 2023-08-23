@@ -18,7 +18,7 @@ public class NurseService {
             return "Enter a valid nurseId";
         }
 
-        if(nurse.getName().equals(null)){
+        if(nurse.getName().isEmpty()){
             return "Name should not be null";
         }
 
@@ -37,7 +37,7 @@ public class NurseService {
         List<Nurse> finalList = new ArrayList<>();
 
         for(Nurse nurse : nurses){
-            if(nurse.getAge()>age){
+            if(nurse.getAge()==age){
                 finalList.add(nurse);
             }
         }

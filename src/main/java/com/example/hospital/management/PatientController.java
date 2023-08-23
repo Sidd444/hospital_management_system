@@ -13,7 +13,7 @@ public class PatientController {
 
     @PostMapping("/add")
     public String addPatient1(@RequestBody Patient patient){
-
+        patientDb.put(patient.getPatientId(), patient);
         return "Added successfully";
     }
 
